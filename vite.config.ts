@@ -1,14 +1,18 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  tanstackStart: {
+    // Força o ecossistema a desativar o SSR e gerar uma Build de SPA Tradicional
+    app: {
+      mode: "spa"
+    }
+  },
   vite: {
-    // Define a base com o nome do seu repositório no GitHub
+    // Mantém o caminho correto para o subdiretório do seu portfólio
     base: "/alcides-dark-data-portfolio/",
     build: {
       outDir: "dist",
       minify: true,
-      cssMinify: true,
-      sourcemap: false,
     },
   },
 });
