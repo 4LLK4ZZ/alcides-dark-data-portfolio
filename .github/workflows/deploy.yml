@@ -36,12 +36,12 @@ jobs:
       - name: Build project
         run: |
           bun run build
-          cp dist/index.html dist/404.html
+          cp dist/client/index.html dist/client/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Pasta de destino correta do TanStack Start/Nitro
+          path: ./dist/client # ALTERADO: Agora aponta para onde os arquivos estáticos realmente estão
 
       - name: Deploy to GitHub Pages
         id: deployment
