@@ -11,7 +11,7 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
-    base: "/",
+    base: "/alcides-dark-data-portfolio/",
     build: {
       outDir: "dist", // Força a saída estática para a pasta dist
     }
