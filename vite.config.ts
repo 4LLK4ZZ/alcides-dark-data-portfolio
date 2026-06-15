@@ -1,18 +1,17 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  tanstackStart: {
-    // Força o ecossistema a desativar o SSR e gerar uma Build de SPA Tradicional
-    app: {
-      mode: "spa"
-    }
-  },
-  vite: {
-    // Mantém o caminho correto para o subdiretório do seu portfólio
-    base: "/alcides-dark-data-portfolio/",
-    build: {
-      outDir: "dist",
-      minify: true,
-    },
+  plugins: [
+    TanStackRouterVite({ autoCodeSplitting: true }),
+    react(),
+    tsconfigPaths(),
+  ],
+  base: "/alcides-dark-data-portfolio/",
+  build: {
+    outDir: "dist",
+    minify: true,
   },
 });
