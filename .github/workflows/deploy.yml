@@ -39,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public # Pasta de destino correta do TanStack Start/Nitro
+          path: ./dist # Pasta de destino correta do TanStack Start/Nitro
 
       - name: Deploy to GitHub Pages
         id: deployment

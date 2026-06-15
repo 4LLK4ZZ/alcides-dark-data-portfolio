@@ -8,22 +8,12 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    // Mantém a entrada do servidor padrão que o Lovable precisa
     server: { entry: "server" },
   },
-  // Passamos as customizações de build de forma segura por dentro do bloco do Vite
   vite: {
-    // Se for o repositório principal (seu-usuario.github.io), deixe "/"
-    // Se for um sub-repositório, altere para "/nome-do-repositorio/"
     base: "/",
-    
-    // Injetamos as diretivas do Nitro aqui para que o compilador do Lovable repasse para o gerador estático
-    // @ts-ignore - Evita que o TypeScript do Lovable trave o build por validação rígida de propriedades
-    nitro: {
-      preset: "github-pages",
-      prerender: {
-        routes: ["/"],
-      },
-    },
+    build: {
+      outDir: "dist", // Força a saída estática para a pasta dist
+    }
   },
 });
