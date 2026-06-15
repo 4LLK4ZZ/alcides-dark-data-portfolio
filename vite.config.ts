@@ -13,5 +13,8 @@ export default defineConfig({
   build: {
     outDir: "dist",
     minify: true,
+    rollupOptions: {
+      input: "index.html", // entrada explícita
+    },
   },
 });
