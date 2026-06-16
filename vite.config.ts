@@ -8,6 +8,6 @@ export default defineConfig({
     },
   },
   vite: {
-    base: "/alcides-dark-data-portfolio/",
+    base: "/",
   },
 });
