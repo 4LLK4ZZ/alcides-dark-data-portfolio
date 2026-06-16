@@ -1,20 +1,13 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  plugins: [
-    TanStackRouterVite({ autoCodeSplitting: true }),
-    react(),
-    tsconfigPaths(),
-  ],
-  base: "/alcides-dark-data-portfolio/",
-  build: {
-    outDir: "dist",
-    minify: true,
-    rollupOptions: {
-      input: "index.html", // entrada explícita
+  nitro: false,
+  tanstackStart: {
+    prerender: {
+      enabled: true,
     },
+  },
+  vite: {
+    base: "/alcides-dark-data-portfolio/",
   },
 });

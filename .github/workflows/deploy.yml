@@ -24,24 +24,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Usando o Bun para compilar o ecossistema do Lovable mais rápido
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: bun install
+        run: npm ci
 
       - name: Build project
         run: |
-          bun run build
-          cp dist/index.html dist/404.html
+          npm run build
+          cp dist/client/index.html dist/client/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # O robô vai ler direto a pasta dist unificada
+          path: ./dist/client
 
       - name: Deploy to GitHub Pages
         id: deployment
