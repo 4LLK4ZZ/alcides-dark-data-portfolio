@@ -1,5 +1,14 @@
 import { useState } from "react";
 
+import ec01 from "@/assets/capturas_ecommerce_django/homepage.png";
+import ec02 from "@/assets/capturas_ecommerce_django/detalhe_produto.png";
+import ec03 from "@/assets/capturas_ecommerce_django/carrinho.png";
+import ec04 from "@/assets/capturas_ecommerce_django/resumo_compras.png";
+import ec05 from "@/assets/capturas_ecommerce_django/pagamento.png";
+import ec06 from "@/assets/capturas_ecommerce_django/pedidos.png";
+import ec07 from "@/assets/capturas_ecommerce_django/pedidos2.png";
+import ec08 from "@/assets/capturas_ecommerce_django/att_cadastro.png";
+
 import echad01 from "@/assets/echad/01-boas-vindas.webp";
 import echad02 from "@/assets/echad/02-loading.webp";
 import echad03 from "@/assets/echad/03-tela-inicial.webp";
@@ -11,6 +20,17 @@ import echad08 from "@/assets/echad/08-genesis-capitulo.webp";
 import echad09 from "@/assets/echad/09-genesis-versiculo.webp";
 import echad10 from "@/assets/echad/10-geracao-ia.webp";
 import echad11 from "@/assets/echad/11-geracao-ia-2.webp";
+
+const ecommerceScreens = [
+  { src: ec01, alt: "Homepage — listagem de produtos com tema dark premium" },
+  { src: ec02, alt: "Detalhe do produto com seleção de variação e preço promocional" },
+  { src: ec03, alt: "Carrinho de compras" },
+  { src: ec04, alt: "Resumo da compra antes de finalizar" },
+  { src: ec05, alt: "Página de pagamento e confirmação do pedido" },
+  { src: ec06, alt: "Lista de pedidos do usuário" },
+  { src: ec07, alt: "Detalhe de pedido finalizado" },
+  { src: ec08, alt: "Atualização de dados cadastrais" },
+];
 
 const echadScreens = [
   { src: echad01, alt: "Tela de boas-vindas do Echad" },
@@ -51,6 +71,15 @@ const projects = [
     desc: "Ambiente centralizado focado no desenvolvimento de pipelines de dados, engenharia reversa, modelagem de processos de ETL e manipulação computacional de volumes estruturados.",
     stack: ["Python", "Jupyter", "Pandas"],
     year: "2026",
+  },
+  {
+    n: "04",
+    title: "E-commerce Django",
+    tag: "Web · Full-stack",
+    desc: "Loja virtual completa com catálogo de produtos, variações, carrinho por sessão, checkout com desconto de estoque em transação atômica e gestão de pedidos. Tema dark & premium com Bootstrap 5.",
+    stack: ["Django", "Python", "Bootstrap 5"],
+    year: "2024",
+    screens: ecommerceScreens,
   },
 ];
 
