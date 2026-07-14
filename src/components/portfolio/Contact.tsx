@@ -20,7 +20,7 @@ export function Contact() {
               Email
             </div>
             <div className="font-display text-2xl group-hover:text-accent transition-colors">
-              allkazzcoder@gmail.com →
+              contato@aanogzs.dev.br →
             </div>
           </a>
           <a
