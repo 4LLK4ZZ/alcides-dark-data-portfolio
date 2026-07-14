@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justificativa de Permissão de Microfone - Echad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        .last-updated {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-left: 4px solid #27ae60;
+            padding-left: 12px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background: #d4edda;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #28a745;
+        }
+        .feature-box {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #0066cc;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .important-note {
+            background: #fff8dc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Justificativa de Permissão de Microfone</h1>
+        <p><strong>Aplicação: Echad</strong></p>
+        <div class="last-updated">
+            <strong>Última atualização:</strong> Julho de 2026
+        </div>
+
+        <h2>1. Introdução</h2>
+        <p>
+            Este documento fornece justificativa detalhada para o uso da permissão de microfone no aplicativo Echad, 
+            conforme exigido pelas políticas da Google Play Store e diretrizes de privacidade do usuário.
+        </p>
+
+        <h2>2. Permissões Solicitadas</h2>
+        <p>
+            Echad solicita acesso ao microfone do dispositivo sob as seguintes permissões Android:
+        </p>
+        <ul>
+            <li><code>android.permission.RECORD_AUDIO</code> — Gravação de áudio</li>
+        </ul>
+
+        <h2>3. Propósito da Permissão</h2>
+
+        <h3>3.1 Recurso Primário</h3>
+        <div class="feature-box">
+            <strong>Entrada de Voz para Aconselhamento Espiritual</strong><br><br>
+            O microfone é utilizado para capturar sua voz e converter fala em texto. 
+            Isso permite uma forma de interação mais natural ao solicitar aconselhamento espiritual ao Echad, 
+            eliminando a necessidade de digitação e tornando a experiência mais acessível e intuitiva.
+        </div>
+
+        <h3>3.2 Funcionalidades Específicas</h3>
+        <ul>
+            <li><strong>Ditado de Reflexões:</strong> Você pode ditar suas reflexões ou orações em vez de digitá-las</li>
+            <li><strong>Consultas de Voz:</strong> Fazer perguntas espirituais por voz para receber respostas da IA</li>
+            <li><strong>Acessibilidade:</strong> Facilita o uso para usuários com dificuldades de digitação ou deficiências visuais</li>
+        </ul>
+
+        <h2>4. Como a Permissão é Usada</h2>
+
+        <h3>4.1 Processo Técnico</h3>
+        <p>
+            Quando você ativa o recurso de entrada por voz:
+        </p>
+        <ol>
+            <li>Você autoriza explicitamente Echad a acessar o microfone (primeira vez e sempre com seu consentimento)</li>
+            <li>O áudio é capturado localmente no seu dispositivo</li>
+            <li>O arquivo de áudio é enviado para processamento de fala em texto (Google Speech-to-Text API)</li>
+            <li>O texto resultante é processado conforme suas consultas normais</li>
+            <li>O arquivo de áudio original é descartado após a conversão</li>
+        </ol>
+
+        <h3>4.2 Serviços Utilizados</h3>
+        <p>
+            O processamento de áudio envolve os seguintes serviços:
+        </p>
+        <ul>
+            <li><strong>Google Cloud Speech-to-Text:</strong> Converte áudio em texto usando inteligência artificial do Google</li>
+            <li><strong>Google Gemini API:</strong> Processa o texto convertido para fornecer aconselhamento</li>
+        </ul>
+
+        <h2>5. Dados de Áudio</h2>
+
+        <h3>5.1 O Que NÃO Fazemos</h3>
+        <div class="highlight">
+            <strong>Proteções de Privacidade:</strong>
+            <ul>
+                <li>✗ Não armazenamos arquivos de áudio bruto em nossos servidores</li>
+                <li>✗ Não compartilhamos áudio com terceiros além do necessário para processamento</li>
+                <li>✗ Não usamos áudio para treinar modelos sem seu consentimento explícito</li>
+                <li>✗ Não acessamos microfone sem sua ação explícita (clique em botão de microfone)</li>
+            </ul>
+        </div>
+
+        <h3>5.2 O Que Fazemos</h3>
+        <ul>
+            <li>Convertemos áudio em texto através de APIs seguras</li>
+            <li>Armazenamos apenas o texto da conversa (se você assim escolher)</li>
+            <li>Você pode deletar históricos de conversa a qualquer momento</li>
+            <li>Encriptamos dados em trânsito com HTTPS/TLS</li>
+        </ul>
+
+        <h2>6. Consentimento e Controle</h2>
+
+        <h3>6.1 Solicitação de Permissão</h3>
+        <p>
+            Conforme as políticas Android:
+        </p>
+        <ul>
+            <li>Primeira vez: Você verá um diálogo do sistema pedindo permissão de microfone</li>
+            <li>Você pode aceitar ou recusar a permissão</li>
+            <li>Pode revogar a permissão a qualquer tempo em Configurações → Privacidade → Permissões</li>
+            <li>Se recusar, o recurso de voz não funcionará, mas o app continua funcional normalmente</li>
+        </ul>
+
+        <h3>6.2 Indicador Visual</h3>
+        <p>
+            Quando Echad está acessando o microfone:
+        </p>
+        <ul>
+            <li>Uma gravação visual (indicador de áudio) aparece na tela</li>
+            <li>O sistema Android exibe ícone de microfone na barra de status</li>
+            <li>Você sempre sabe quando a gravação está ativa</li>
+        </ul>
+
+        <h2>7. Segurança e Privacidade de Áudio</h2>
+
+        <h3>7.1 Medidas de Segurança</h3>
+        <ul>
+            <li><strong>Encriptação:</strong> Dados de áudio em trânsito são encriptados (HTTPS)</li>
+            <li><strong>Validação:</strong> Apenas áudio processado internamente é armazenado</li>
+            <li><strong>Limpeza:</strong> Arquivos temporários são excluídos após conversão</li>
+            <li><strong>Acesso Limitado:</strong> Apenas serviços autorizados acessam dados de áudio</li>
+        </ul>
+
+        <h3>7.2 Política de Terceiros</h3>
+        <p>
+            Serviços usados para processar áudio têm suas próprias políticas:
+        </p>
+        <ul>
+            <li><strong>Google Cloud:</strong> <a href="https://cloud.google.com/speech-to-text/docs/privacy" target="_blank">Política de Privacidade - Speech-to-Text</a></li>
+            <li><strong>Google Gemini:</strong> <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade do Google</a></li>
+        </ul>
+
+        <div class="important-note">
+            <strong>Observação:</strong> Ler as políticas de terceiros é sua responsabilidade. 
+            Se não concordar, você pode desativar o recurso de voz nas configurações do Echad.
+        </div>
+
+        <h2>8. Alternativas</h2>
+        <p>
+            O acesso ao microfone é <strong>opcional</strong>. Você pode usar Echad normalmente:
+        </p>
+        <ul>
+            <li>Digitando suas reflexões e perguntas</li>
+            <li>Usando teclado virtual ou teclado físico</li>
+            <li>Sem fornecer qualquer informação de voz</li>
+        </ul>
+
+        <h2>9. Transparência e Conformidade</h2>
+
+        <h3>9.1 LGPD (Lei Geral de Proteção de Dados)</h3>
+        <p>
+            Estamos em conformidade com LGPD:
+        </p>
+        <ul>
+            <li>Você tem consentimento explícito antes de qualquer captura de áudio</li>
+            <li>Você pode revogar consentimento a qualquer momento</li>
+            <li>Você pode solicitar cópia de dados de áudio processados</li>
+            <li>Você pode solicitar exclusão de dados (direito ao esquecimento)</li>
+        </ul>
+
+        <h3>9.2 Conformidade Google Play Store</h3>
+        <p>
+            Este aplicativo está em conformidade com a política de permissões sensíveis da Google Play Store:
+        </p>
+        <ul>
+            <li>Permissão de microfone é solicitada com propósito claro</li>
+            <li>Usar apenas para fins declarados (voz para aconselhamento)</li>
+            <li>Não vender dados de áudio</li>
+            <li>Respeitar configurações de privacidade do dispositivo</li>
+        </ul>
+
+        <h2>10. Mudanças Futuras</h2>
+        <p>
+            Se adicionarmos novos usos do microfone no futuro:
+        </p>
+        <ul>
+            <li>Notificaremos via atualização do app</li>
+            <li>Solicitar novo consentimento se necessário</li>
+            <li>Atualizar esta documentação</li>
+        </ul>
+
+        <h2>11. Dúvidas ou Preocupações</h2>
+        <p>
+            Se você tem preocupações sobre o uso do microfone:
+        </p>
+
+        <div class="highlight">
+            <strong>Entre em Contato:</strong><br>
+            Email: <a href="mailto:contato@aanogzs.dev.br">contato@aanogzs.dev.br</a><br>
+            Assunto: "Dúvida sobre Permissão de Microfone"<br><br>
+            Responderemos dentro de 7 dias úteis.
+        </div>
+
+        <h2>12. Opções de Privacidade</h2>
+
+        <h3>12.1 Configurações do App</h3>
+        <p>
+            Dentro do Echad, você pode:
+        </p>
+        <ul>
+            <li>Desativar recurso de voz (afetará apenas entrada de voz, não funcionalidade geral)</li>
+            <li>Limpar histórico de conversas de voz</li>
+            <li>Controlar se históricos são armazenados localmente ou sincronizados</li>
+        </ul>
+
+        <h3>12.2 Configurações do Sistema (Android)</h3>
+        <p>
+            No seu dispositivo Android:
+        </p>
+        <ul>
+            <li>Vá para Configurações → Apps → Echad</li>
+            <li>Toque em "Permissões"</li>
+            <li>Selecione "Microfone"</li>
+            <li>Escolha: Permitir, Permitir apenas ao usar o app, ou Não permitir</li>
+        </ul>
+
+        <div class="footer">
+            <p>© 2026 Echad. Todos os direitos reservados.</p>
+            <p>Documento preparado de acordo com Google Play Store Developer Policy e LGPD.</p>
+            <p>Última atualização: Julho de 2026</p>
+        </div>
+    </div>
+</body>
+</html>
